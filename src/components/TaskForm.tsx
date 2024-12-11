@@ -37,6 +37,7 @@ export default function TaskForm({ initialTask }: TaskFormProps) {
     } catch (err) {
       toast.error('Failed to save task. Please try again.');
       setError('Failed to save task. Please try again.');
+      console.error('Error creating task:', err);
       setIsSubmitting(false);
     }
   };
